@@ -301,6 +301,7 @@ namespace trial.Controllers
 
                   string username = getUsername();
                   NOTES note = _context.notes.Find(id);
+                  NOTES mynote = _context.notes.Find(id);
                   if(note.EMAIL == username){
                   var ID = note.noteID;
                 //IEnumerable<Attachments> a = _context.attachments.AsEnumerable();
