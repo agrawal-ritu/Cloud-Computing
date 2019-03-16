@@ -183,7 +183,7 @@ namespace trial.Controllers
             return StatusCode(201,new{noteId= notes.noteID, content  = n.content, created_on = DateTime.Now,title = n.title,last_updated_on= DateTime.Now,attachments = att});
                     }
             else{
-                var conflict = "Bad Request";
+                var conflict = "Bad Request!!!";
                 return StatusCode(409, new{ result = conflict});
 
             }  
@@ -391,7 +391,7 @@ namespace trial.Controllers
                      string url =  fileTransferUtility.S3Client.GetPreSignedURL(request);         
             string username = getUsername();
          Console.WriteLine(arguments[1]);
-                Console.WriteLine("Upload 1 completed");
+                Console.WriteLine("Upload ");
             if(file.Length > 0){
 
             }
