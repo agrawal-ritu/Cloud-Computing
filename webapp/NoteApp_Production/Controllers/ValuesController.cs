@@ -124,7 +124,7 @@ namespace trial.Controllers
             Users us =  _context.Users.Find(u.Email);
             if(us == null){
                 if(ModelState.IsValid){
-                _log.LogInformation("USER is inserted");
+                _log.LogInformation("USER is inserted Successfully");
                 Console.WriteLine("User is registered");
                 
                 statsDPublisher.Increment("_USER_API");
@@ -211,7 +211,6 @@ namespace trial.Controllers
 
             }  
     }
-
         [HttpGet]
         [Route("/note")]
         [Authorize]
@@ -256,7 +255,7 @@ namespace trial.Controllers
             return StatusCode(200, Json);
             }
             else{
-                return StatusCode(200, new{result = "You Don't have any notes"});
+                return StatusCode(200, new{result = "You Don't have any notes!!! Sorry"});
             }
        }
         [HttpGet]
