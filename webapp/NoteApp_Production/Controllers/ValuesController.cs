@@ -540,7 +540,7 @@ namespace trial.Controllers
         }
 
  [HttpPost]
-        [Route("/reset")]
+        [Route("/pwdreset")]
         public async void passwordreset([FromBody] Users u){
            Users a =  _context.Users.Find(u.Email);
            _log.LogInformation( "Listing all items");

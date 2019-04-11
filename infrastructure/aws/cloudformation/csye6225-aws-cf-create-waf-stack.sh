@@ -12,7 +12,7 @@
 #MAXEXPECTEDCOOKIESIZE=4093
 #CSRFEXPECTEDHEADER="x-csrf-token"
 #CSRFEXPECTEDSIZE=36
-LOADBALANCER=$(aws elbv2 describe-load-balancers --query LoadBalancers[0].LoadBalancerArn --output text)
+LOADBALANCER=$(aws elbv2 describe-load-balancers --query LoadBalancers[1].LoadBalancerArn --output text)
 
 echo "ELBResourceARN: $LOADBALANCER"
 
